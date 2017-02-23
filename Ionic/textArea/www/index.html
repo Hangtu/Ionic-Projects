@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"> 
+    
+    <title>Ionic Modal</title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+  </head>
+  <body ng-controller="AppCtrl">
+    
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">Contacts</h1>
+      <div class="buttons">
+        <button class="button button-icon ion-compose" ng-click="modal.show()">
+        </button>
+      </div>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item ng-repeat="item in items" ng-click="editItem(item)">
+          {{item.name}} 
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    
+    <script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view class="product edit create" >
+      <form name="itemEdit" novalidate ng-submit="submitForm(itemEdit.$valid)">
+        <ion-header-bar class="bar-positive fix-buttons">
+          <button class="button" ng-click="cancel()">Cancel</button>
+           <h1 class="title">{{ pageTitle }}</h1>
+          <button class="button" ng-click="saveItem(itemEdit.$valid)"  animate-on-loading data-text="Post">Post</button>
+        </ion-header-bar>
+        <ion-content has-bouncing="true">
+    <div class="row">
+      <div class="col">
+        <label class="item item-input large">
+        <input type="text" placeholder="{{item.type }} Name*" ng-model="item.name" required name="title">
+        </label> 
+                  
+      </div>
+    </div>
+    <div class="row" ng-show="(itemEdit.title.$dirty && itemEdit.title.$error.required) || (data.itemSubmitted && itemEdit.title.$error.required)">
+      <div class="col">
+        <div class="error clearfix" >Title is required.</div> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="{{item.image}}" /> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        Some more spacer text to push the text description down. <br/><br/><br/><br/>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col"> 
+        <label class="item item-input text">
+          <textarea rows="1"  ng-required="true" name="description"></textarea>
+        </label>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="error clearfix" ng-show="(itemEdit.description.$dirty && itemEdit.description.$error.required) || (data.itemSubmitted && itemEdit.description.$error.required)">Description is required.</div>
+      </div>
+    </div>   
+    
+</ion-content>
+      </form>
+    </ion-modal-view>
+    </script>
+    
+  </body>
+</html>
+

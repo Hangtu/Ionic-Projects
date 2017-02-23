@@ -1,0 +1,9 @@
+<ion-view cache-view="true">
+    <ion-content>
+     <ul class="list">
+       <li class="item" ng-repeat="ciudad in ciudades | orderBy:'zonaNombre'" ng-click="selecionarC(ciudad.idzona, ciudad.nombreZona)">
+        {{ciudad.nombreZona}}
+       </li>
+    </ul>
+    </ion-content>
+</ion-view>

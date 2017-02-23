@@ -1,0 +1,40 @@
+<ion-view view-title="">
+    <ion-content ng-repeat="item in user_detail">
+<div class="list card">
+    <div class="item">
+    <h2>{{item.name}} {{item.surname}} {{imag}}</h2>
+    <p>Age: {{item.edad}}</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" ng-src="http://www.newdifusion.com/SelfieServer/{{profile_img}}">
+    <p>
+      {{item.phrase}}
+    </p>
+    <p>Occupation: {{item.occupation}}</p>
+    <p>Hobbies: {{item.hobbies}}</p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item">
+      <i class="icon ion-earth"></i>
+      {{item.views}} views
+    </a>
+
+    <a class="tab-item" ng-click="abrir('{{item.twitter}}')">
+      <i class="icon ion-ios-paw"></i>
+      Web page
+    </a>
+  </div>
+</div>
+
+<div class="card">
+<div class="item item-divider">
+    Facebook
+  </div>
+  <div class="item item-text-wrap">
+    {{item.facebook}}
+  </div>
+</div>
+  </ion-content>
+</ion-view>

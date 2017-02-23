@@ -1,0 +1,61 @@
+<ion-view view-title="Bienvenido">
+
+ <ion-content>
+        <div ng-hide="view">
+          <div class="list padding">
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input type="email" ng-model="user.email">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" ng-model="user.password">
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-outline button-positive" ng-click="signIn(user)">
+              Iniciar Sesion
+            </button>
+            <p class="text-center">
+              <a ng-href="#/tab/registro">Registrarse</a>
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col text-center"><img src="http://www.madeinwelland.ca/img/icon-location.png" alt=""></div>
+          </div>
+        </div>
+
+  <div ng-hide="view2">
+        
+        <div class="list card">
+          <div class="item item-image">
+            <img ng-src="http://www.sintetia.com/wp-content/uploads/2012/05/Foto-perfil.jpg"
+              ng-click="empresaPerfil()">
+            </div>
+
+            <div class="item item-avatar">
+            <img src="http://placehold.it/100x100">
+            <h2>Foto De Perfil</h2>
+            <p>Hang Tu Wong Ley</p>
+          </div> 
+      </div>
+        
+        <div class="card">
+          <div class="item item-text-wrap text-center">
+            Tus empresas
+         </div>
+       </div>
+
+
+      <ion-list>
+        <ion-item ng-repeat="item in items" ng-href="#/tab/company/{{item.idempresa}}">
+            {{item.nombre}}!
+        </ion-item>
+      </ion-list>
+          <button class="button button-outline button-block button-positive">
+            Crear una empresa
+          </button>
+  </div>
+</ion-content>
+</ion-view>

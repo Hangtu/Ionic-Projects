@@ -1,0 +1,52 @@
+<ion-view view-title="Principal" cache-view="false">
+  
+  <ion-content>
+    <ion-refresher
+      pulling-text="Recargando..."
+      on-refresh="doRefresh()"
+      pulling-icon="ion-arrow-up-c">
+    </ion-refresher>
+  <div class="list card" ng-repeat="dato in items">
+
+     <div class="item item-avatar">
+        <img src="http://192.168.1.72/socialD/system/{{dato.carpeta}}/img/profile.png">
+        <a href="#/tab/momento/{{dato.fk_empresa}}">
+           <h2>{{dato.nombre}}</h2>
+        </a>
+        <p>Publicacion {{dato.fechaPublicacion}}</p>
+      </div>
+
+      <div class="item item-body">
+       <img class="full-image" src="http://192.168.1.72/socialD/system/{{dato.carpeta}}/momento/{{dato.imagenM}}">
+        <p>{{dato.descripcionM}}</p>
+        <p>
+          <a  class="subdued" ng-model="con">{{dato.likeCount}} Likes</a>
+          <a  class="subdued">{{dato.contador}} Comentarios</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" ng-click="like($index,{{dato.idmomento}})">
+          <i class="icon ion-thumbsup {{dato.color}}"></i>
+          Like
+        </a>
+        <a class="tab-item" ng-click="openModal({{dato.idmomento}},{{dato.contador}})">
+          <i class="icon ion-chatbox"></i>
+          Comentar
+        </a>
+        <a class="tab-item" ng-click="compartir()">
+          <i class="icon ion-share"></i>
+           Compartir
+        </a>
+      </div>
+  </div>
+
+    
+
+   <ion-infinite-scroll on-infinite="loadMore()"
+     distance="5%"
+     ng-if="moreDataCanBeLoaded()">
+   </ion-infinite-scroll> 
+
+  </ion-content>
+</ion-view>

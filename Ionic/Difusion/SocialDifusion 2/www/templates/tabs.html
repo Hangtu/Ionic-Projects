@@ -1,0 +1,24 @@
+<ion-tabs class="tabs-positive tabs-icon-top">
+
+     <ion-tab title="Inicio" icon-on="ion-ios-heart" icon-off="ion-ios-heart-outline" href="#/tab/momento">
+		 <ion-nav-view name="momento-tab"><ion-nav-view>
+	 </ion-tab>
+
+
+	 <ion-tab title="Categorias" icon-on="ion-happy" icon-off="ion-happy-outline" 
+	 	href="#/tab/categorias">
+	  	<ion-nav-view name="categorias-tab"><ion-nav-view>
+	 </ion-tab>
+
+
+	 <ion-tab title="Mi cuenta" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" href="#/tab/account">
+	 	<ion-nav-view name="account-tab"><ion-nav-view>
+	</ion-tab>
+
+
+     <ion-tab title="Mas" icon-on="ion-ios-more" icon-off="ion-ios-more-outline" href="#/tab/more"
+         on-deselect="SayBye()" on-select="SayHello()">
+	 	<ion-nav-view name="more-tab"><ion-nav-view>
+	</ion-tab>
+   
+</ion-tabs> 

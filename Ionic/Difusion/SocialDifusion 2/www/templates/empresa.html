@@ -1,0 +1,69 @@
+<ion-view view-title="" cache-view="false">
+
+<ion-content> 
+ <div class="list card" ng-repeat="item in empresa">
+  <div class="item item-body">
+    <img class="full-image" ng-src="http://192.168.1.72/socialD/system/{{item.carpeta}}/img/profile.png">
+    <p>
+      {{item.descripcion}}
+    </p>
+    <p>
+      {{item.domicilio}}
+    </p>
+  </div>
+      <a ng-href="tel:{{item.telefono}}" class="item item-icon-left">
+        <i class="icon ion-ios-telephone"></i>
+          Llamar
+      </a>
+      <a onclick="window.open('swipe.html', '_blank', 'location=no')" class="item item-icon-left">
+        <i class="icon ion-images button-icon"></i>
+         Galeria
+      </a>
+      <a onclick="window.open('mapa.html', '_blank', 'location=no')" class="item item-icon-left">
+        <i class="icon ion-map"></i>
+         Ubicacion
+      </a>
+      <a class="item item-icon-left" ng-href="#/tab/comentario/{{item.idempresa}}">
+        <i class="icon ion-chatboxes"></i>
+        Comentarios
+      </a>
+</div>
+
+<div class="list card" ng-repeat="dato in items">
+
+  <div class="item item-avatar">
+    <img src="http://192.168.1.72/socialD/system/{{dato.carpeta}}/img/profile.png">
+    <h2>{{dato.nombre}}</h2>
+    <p>Publicacion {{dato.fechaPublicacion}}</p>
+  </div>
+
+  <div class="item item-body">
+   <img class="full-image" src="http://192.168.1.72/socialD/system/{{dato.carpeta}}/momento/{{dato.imagenM}}">
+    <p>{{dato.descripcionM}}</p>
+    <p>
+      <a  class="subdued">{{dato.likeCount}} Likes</a>
+      <a  class="subdued">{{dato.contador}} Comentarios</a>
+    </p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" ng-click="like($index,{{dato.idmomento}})">
+      <i class="icon ion-thumbsup {{dato.color}}"></i>
+      Like
+    </a>
+    <a class="tab-item" ng-click="openModal({{dato.idmomento}},{{dato.contador}})">
+      <i class="icon ion-chatbox"></i>
+      Comentar
+    </a>
+    <a class="tab-item" ng-click="compartir()">
+      <i class="icon ion-share"></i>
+       Compartir
+    </a>
+  </div>
+</div>
+  <ion-infinite-scroll on-infinite="loadMore()" 
+    distance="5%"
+    ng-if="moreDataCanBeLoaded()">
+  </ion-infinite-scroll> 
+</ion-content>
+</ion-view>

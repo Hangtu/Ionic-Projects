@@ -1,0 +1,28 @@
+<ion-view view-title="Selfie G" cache-view="false">
+
+<ion-content class="">
+  
+  <div class="list card" ng-repeat="item in items">
+  <div class="item item-avatar">
+    <img ng-src="http://www.newdifusion.com/SelfieServer/{{item.image_profile}}?{{datos}}">
+      <h2>{{item.name}} {{item.surname}}</h2>
+      <p>{{item.countryName}}</p>
+    </div>
+
+ <a href="#/tab/momento/{{item.iduser}}">
+  <div class="item item-image">
+  <img ng-src="http://www.newdifusion.com/SelfieServer/{{item.image_selfie}}?{{datos}}">
+  </div>
+</a>
+
+  <a class="item item-icon-left dark" href="#/tab/momento/{{item.iduser}}">
+    <i class="icon ion-earth"></i>
+    {{item.views}} views
+  </a>
+</div>
+   <ion-infinite-scroll on-infinite="loadMore()" 
+    distance="5%">
+   </ion-infinite-scroll> 
+
+  </ion-content>
+</ion-view>

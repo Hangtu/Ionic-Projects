@@ -1,0 +1,52 @@
+<ion-view view-title="Your account" cache-view="false">
+    <ion-content class="padding">
+    
+     
+     <div class="list card">
+    <div class="item item-avatar">
+    <img ng-src="http://www.newdifusion.com/SelfieServer/{{profiles}}" ng-click="subir()">
+      <h2>{{name}} {{surname}}</h2>
+      <p>{{occupation}}</p>
+    </div>
+
+  <div class="item item-image">
+  <img ng-src="http://www.newdifusion.com/SelfieServer/{{selfie}}" ng-click="subir2()">
+  </div>
+
+  <a class="item item-icon-left dark">
+    <i class="icon ion-earth"></i>
+    {{views}} views 
+  </a>
+</div>
+
+
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Status</span>
+    <input type="text" placeholder="Status..." ng-model="phrase">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Hobbies</span>
+    <input type="text" ng-model="hobbies" placeholder="my hobbies..">
+  </label>
+    <label class="item item-input item-stacked-label">
+    <span class="input-label">Occupation</span>
+    <input type="text" ng-model="occupation" placeholder="occupation">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Facebook</span>
+    <input type="text" placeholder="your facebook" ng-model="facebook">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Web Page</span>
+    <input type="text" placeholder="Web page URL" ng-model="twitter">
+  </label>
+</div>
+
+<button class="button button-block button-balanced" ng-click="guardar(phrase,hobbies,occupation,facebook,twitter)">
+  Save changes
+</button>
+
+
+  </ion-content>
+</ion-view>

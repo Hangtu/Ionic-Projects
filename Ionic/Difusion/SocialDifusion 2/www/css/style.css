@@ -1,0 +1,12 @@
+/* Empty. Add your own CSS if you like */
+.centrar-texto{
+	text-align: center;
+}
+
+.footer-item-input-insert {
+    position: inherit;
+}
+
+a{
+      text-decoration:none;
+}

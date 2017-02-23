@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVViewController.m \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDV.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVAvailability.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVAvailabilityDeprecated.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVPlugin.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVPluginResult.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVViewController.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVWhitelist.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVDebug.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVTimer.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/NSData+Base64.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVJSON.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVConfigParser.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h \
+  /Users/newdiffusionapp/Desktop/SocialDifusion/platforms/ios/CordovaLib/Classes/CDVHandleOpenURL.h

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane ng-controller="CameraCtrl">
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>
+   <ion-content class="has-header has-bottom" padding="true">
+    <h1><i class="mdi-image-camera-alt small"></i><br />INSERT PHOTO</h1>
+    <div class="button-bar"> <a class="button" ng-click="takePicture();">Take photo</a> <a class="button" ng-click="selectPicture()">Choice photo</a> <a class="button" ng-click="viewPictures();">View loaded</a> </div>
+    
+    <div ng-show="picData" class="item item-image">When pics loaded click to upload!<img id="myImage" class="item" ng-src="{{picData}}" ng-click="uploadPicture()" style="height:200px;"/></div>
+    <div class="home-sq" ng-show=photos><p><i class="icon ion-alert-circled" style="color:#F60"></i> Click to set photo like avatar, or lon click to delete!<p>
+      <div ng-repeat="photo in photos track by $index" ng-click="setPhoto($index, photo.name, profilo.user_id)" on-hold="delPhoto($index, photo.name)" style="background-image:url({{photo.file}});background-size:120% auto"> </div>
+    </div>
+  </ion-content>
+    </ion-pane>
+  </body>
+</html>

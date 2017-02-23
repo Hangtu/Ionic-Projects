@@ -1,0 +1,15 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+<ion-card-content>
+  <button [navPush]="paginaAbout">{{greeter}}</button>
+
+  <button (click)="add(1,2)">{{suma}}</button>
+</ion-card-content>
+
+<p>{{hh}}</p>
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-view view-title="" cache-view="true">
+    <ion-content>
+	   <ion-list>
+          <ion-item ng-repeat="item in items" class="item item-thumbnail-left item-text-wrap" ng-href="#/tab/empresa/{{item.idempresa}}">
+           <img ng-src="http://192.168.1.72/socialD/system/{{item.carpeta}}/img/profile.png">
+           <h2>{{item.nombre}}</h2>
+           <p>{{item.disponible}}</p>
+          </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-infinite-scroll on-infinite="loadMore()" 
+     distance="5%"
+     ng-if="moreDataCanBeLoaded()">
+    </ion-infinite-scroll> 
+</ion-view>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/photoswipe.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/mapa.js"></script>
+    <script src="js/more.js"></script>
+
+    <link rel="stylesheet" href="dist/photoswipe.css">
+    <link rel="stylesheet" href="dist/default-skin/default-skin.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+<body ng-controller="ImagenCtrl">
+ 
+<div class="my-simple-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" ng-repeat="item in imagenes">
+      <a href="http://192.168.1.72/socialD/system/{{carpeta}}/img/{{item}}" itemprop="contentUrl" data-size="1024x1024">
+      <img src="http://192.168.1.72/socialD/system/{{carpeta}}/img/{{item}}" itemprop="thumbnail" alt="Image description" />
+      </a>
+    </figure> 
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+  <script src="dist/photoswipe.min.js"></script>
+  <script src="dist/photoswipe-ui-default.min.js"></script>
+  <script src="dist/photoswipe.js"></script>
+
+</body>
+
+</html>

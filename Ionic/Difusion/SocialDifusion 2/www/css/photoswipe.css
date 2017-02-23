@@ -1,0 +1,27 @@
+/* Empty. Add your own CSS if you like */
+.my-simple-gallery {
+  width: 100%;
+  float: left;
+}
+.my-simple-gallery img {
+  width: 100px;
+  height: 100px;
+}
+.my-simple-gallery figure {
+  display: block;
+  float: left;
+  margin: 1px 10px 10px 1px;
+  width: 100px;
+}
+.my-simple-gallery figcaption {
+  display: none;
+}
+.mi-padding{
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+body{
+	background-color: #000;
+}

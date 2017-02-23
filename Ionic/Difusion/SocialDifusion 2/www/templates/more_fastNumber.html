@@ -1,0 +1,21 @@
+<ion-view view-title="" cache-view="true">
+
+<ion-header-bar class="bar-subheader item-input-inset">
+  <label class="item-input-wrapper">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="search" placeholder="Buscar"  ng-model="name">
+     </label>     
+    </ion-header-bar>
+
+    <ion-content>
+      <div class="list">
+	      <div class="item item-button-right" ng-repeat="number in fastNumber | filter : name |orderBy:'nombre'">
+	       {{number.nombre}}
+		       <a class="button button-positive" ng-href="tel:{{number.telefono}}">
+		         <i class="icon ion-ios-telephone"></i>
+		      </a>
+	      </div>
+      </div>
+    </ion-content>
+
+</ion-view>

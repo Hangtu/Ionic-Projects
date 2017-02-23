@@ -1,0 +1,58 @@
+<ion-view view-title="">
+<ion-content>
+<div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Nombre</span>
+    <input type="text" placeholder="Mi empresa" ng-model="empresa.name">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Domicilio</span>
+    <input type="text" ng-model="empresa.address" placeholder="Calle Higuel # 34 Col. Terminal">
+  </label>
+    <label class="item item-input item-stacked-label">
+    <span class="input-label">Telefono</span>
+    <input type="tel" ng-model="empresa.tel" placeholder="311234567">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Descripcion</span>
+    <input type="text" placeholder="Esta empresa se dedica a..." ng-model="empresa.desc">
+  </label>
+  <h5 class="text-center">Horarios</h5> 
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Apertura</span>
+    <input type="time" placeholder="7:00 AM" ng-model="empresa.open">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Cierre</span>
+    <input type="time" placeholder="9:00 PM" ng-model="empresa.close" >
+  </label>
+  </div>
+  <h5 class="text-center">Dias de servicio</h5> 
+  <ul class="list">
+  <li class="item item-checkbox checkbox-balanced">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="empresa.mon" ng-true-value="'Lunes'"  ng-false-value="''">
+     </label>
+       Lunes
+  </li>
+    <li class="item item-checkbox checkbox-balanced">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="empresa.tues" ng-true-value="'Martes'"  ng-false-value="''">
+     </label>
+       Martes
+  </li>
+    <li class="item item-checkbox checkbox-balanced">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="empresa.wend" ng-true-value="'Miercoles'"  ng-false-value="''">
+     </label>
+       Miercoles
+  </li>
+</ul>
+
+ <button class="button button-block button-balanced" ng-click="guardar(empresa)">
+  Save changes
+ </button>
+
+
+</ion-content>
+</ion-view>
